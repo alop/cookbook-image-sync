@@ -19,7 +19,7 @@
 "shared_folders" :
         [
                 {
-                        "secret" : "<%= node["image-sync"]["shared"]["secret_key"] %>",
+                        "secret" : "<%= @secret_key %>",
                         "dir" : "<%= node["image-sync"]["shared"]["dir"] %>",
                         "use_relay_server" : <%= node["image-sync"]["shared"]["use_relay"] %>,
                         "use_dht" : <%= node["image-sync"]["shared"]["use_dht"] %>,
@@ -27,7 +27,7 @@
                         "use_sync_trash" : <%= node["image-sync"]["shared"]["sync_trash"] %>,
                         "known_hosts" :
                         [
-                          <% @known_host.map{ |s| %Q{"#{s}"} }.join(', ') %>
+                          <%= @known_host.map{ |s| %Q{"#{s}"} }.join(', ') %>
                         ]
                 }
         ]
