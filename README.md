@@ -2,8 +2,11 @@ Description
 ===========
 
 Are you running a large Openstack installation based on the stackforge chef cookbooks?
+
 Do you use a swift/S3 backend for your glance images?
+
 Do you want a robust HA glance image-cache?
+
 If yes, image-sync is for YOU!
 
 cookbook-image-sync will search for your glance servers, and use BitTorrent Sync to keep your image-cache hot.
